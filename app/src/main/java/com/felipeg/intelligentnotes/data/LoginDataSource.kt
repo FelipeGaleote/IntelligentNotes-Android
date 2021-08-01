@@ -1,12 +1,8 @@
 package com.felipeg.intelligentnotes.data
 
-import android.util.Log
 import com.felipeg.intelligentnotes.configuration.RetrofitConfig
 import com.felipeg.intelligentnotes.data.LoginService.LoginInput
 import com.felipeg.intelligentnotes.data.model.LoggedInUser
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.io.IOException
 
 class LoginDataSource {

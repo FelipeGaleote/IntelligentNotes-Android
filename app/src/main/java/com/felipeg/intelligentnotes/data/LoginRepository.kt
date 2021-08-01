@@ -18,24 +18,25 @@ class LoginRepository(val dataSource: LoginDataSource, private val context: Cont
 
     suspend fun login(username: String, password: String): Result<LoggedInUser> {
         val result = dataSource.login(username, password)
-
-
-        if (result is Result.Success) {
-
-            setLoggedInUser(result.data)
-            with(context) {
-                val sharedPref = getSharedPreferences(
-                    getString(R.string.preference_file_key),
-                    Context.MODE_PRIVATE
-                )
-                val sharedPrefEditor = sharedPref.edit()
-                sharedPrefEditor.putString(getString(R.string.jwt_token_key), result.data.jwtToken)
-                sharedPrefEditor.commit()
+        with(result) {
+            if (this is Result.Success) {
+                setLoggedInUser(data)
+                saveTokenOnSharedPreferences(data.jwtToken)
             }
-
         }
-
         return result
+    }
+
+    private fun saveTokenOnSharedPreferences(jwtToken: String) {
+        with(context) {
+            val sharedPref = getSharedPreferences(
+                getString(R.string.preference_file_key),
+                Context.MODE_PRIVATE
+            )
+            val sharedPrefEditor = sharedPref.edit()
+            sharedPrefEditor.putString(getString(R.string.jwt_token_key), jwtToken)
+            sharedPrefEditor.commit()
+        }
     }
 
     private fun setLoggedInUser(loggedInUser: LoggedInUser) {
