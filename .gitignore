@@ -27,6 +27,7 @@
 .idea/gradle.xml
 .idea/jarRepositories.xml
 .idea/navEditor.xml
+.idea/discord.xml
 
 .DS_Store
 /build
