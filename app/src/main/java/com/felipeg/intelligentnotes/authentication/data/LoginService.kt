@@ -1,4 +1,4 @@
-package com.felipeg.intelligentnotes.data
+package com.felipeg.intelligentnotes.authentication.data
 
 import kotlinx.coroutines.Deferred
 import okhttp3.MultipartBody

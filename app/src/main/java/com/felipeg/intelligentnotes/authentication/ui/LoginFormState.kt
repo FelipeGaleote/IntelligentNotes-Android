@@ -1,4 +1,4 @@
-package com.felipeg.intelligentnotes.ui.login
+package com.felipeg.intelligentnotes.authentication.ui
 
 /**
  * Data validation state of the login form.

@@ -1,4 +1,4 @@
-package com.felipeg.intelligentnotes.data
+package com.felipeg.intelligentnotes.common
 
 /**
  * A generic class that holds a value with its loading status.

@@ -1,4 +1,4 @@
-package com.felipeg.intelligentnotes.data.model
+package com.felipeg.intelligentnotes.authentication.data.model
 
 data class LoggedInUser(
     val userId: String,

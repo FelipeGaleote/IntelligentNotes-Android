@@ -1,4 +1,4 @@
-package com.felipeg.intelligentnotes.ui.login
+package com.felipeg.intelligentnotes.authentication.ui
 
 /**
  * Authentication result : success (user details) or error message.

@@ -1,11 +1,11 @@
-package com.felipeg.intelligentnotes.ui.login
+package com.felipeg.intelligentnotes.authentication.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.felipeg.intelligentnotes.R
-import com.felipeg.intelligentnotes.data.LoginRepository
-import com.felipeg.intelligentnotes.data.Result
+import com.felipeg.intelligentnotes.authentication.data.LoginRepository
+import com.felipeg.intelligentnotes.common.Result
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

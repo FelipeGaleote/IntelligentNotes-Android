@@ -1,4 +1,4 @@
-package com.felipeg.intelligentnotes.ui.login
+package com.felipeg.intelligentnotes.authentication.ui
 
 /**
  * User details post authentication that is exposed to the UI

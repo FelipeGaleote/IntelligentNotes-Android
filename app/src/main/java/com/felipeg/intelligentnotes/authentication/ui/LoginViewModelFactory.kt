@@ -1,10 +1,10 @@
-package com.felipeg.intelligentnotes.ui.login
+package com.felipeg.intelligentnotes.authentication.ui
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.felipeg.intelligentnotes.data.LoginDataSource
-import com.felipeg.intelligentnotes.data.LoginRepository
+import com.felipeg.intelligentnotes.authentication.data.LoginDataSource
+import com.felipeg.intelligentnotes.authentication.data.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

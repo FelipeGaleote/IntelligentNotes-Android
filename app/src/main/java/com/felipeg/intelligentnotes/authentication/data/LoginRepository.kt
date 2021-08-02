@@ -1,8 +1,9 @@
-package com.felipeg.intelligentnotes.data
+package com.felipeg.intelligentnotes.authentication.data
 
 import android.content.Context
 import com.felipeg.intelligentnotes.R
-import com.felipeg.intelligentnotes.data.model.LoggedInUser
+import com.felipeg.intelligentnotes.authentication.data.model.LoggedInUser
+import com.felipeg.intelligentnotes.common.Result
 
 class LoginRepository(val dataSource: LoginDataSource, private val context: Context) {
 

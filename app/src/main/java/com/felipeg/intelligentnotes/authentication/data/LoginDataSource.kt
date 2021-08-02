@@ -1,8 +1,9 @@
-package com.felipeg.intelligentnotes.data
+package com.felipeg.intelligentnotes.authentication.data
 
 import com.felipeg.intelligentnotes.configuration.RetrofitConfig
-import com.felipeg.intelligentnotes.data.LoginService.LoginInput
-import com.felipeg.intelligentnotes.data.model.LoggedInUser
+import com.felipeg.intelligentnotes.authentication.data.LoginService.LoginInput
+import com.felipeg.intelligentnotes.authentication.data.model.LoggedInUser
+import com.felipeg.intelligentnotes.common.Result
 import java.io.IOException
 
 class LoginDataSource {
