@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.felipeg.intelligentnotes.R
+import com.felipeg.intelligentnotes.common.SharedPreferencesRepository
 import com.felipeg.intelligentnotes.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
         val login = binding.login
         val loading = binding.loading
 
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory(applicationContext))
+        loginViewModel = ViewModelProvider(this, LoginViewModelFactory(applicationContext.getSharedPreferences(SharedPreferencesRepository.PREFERENCE_FILE_KEY, MODE_PRIVATE)))
             .get(LoginViewModel::class.java)
 
         loginViewModel.loginFormState.observe(this@LoginActivity, Observer {
