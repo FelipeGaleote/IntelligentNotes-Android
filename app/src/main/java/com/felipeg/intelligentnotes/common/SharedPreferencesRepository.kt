@@ -15,4 +15,8 @@ class SharedPreferencesRepository(private val sharedPreferences: SharedPreferenc
         sharedPrefEditor.apply()
     }
 
+    fun getString(key: String) : String? {
+        return this.sharedPreferences.getString(key, null)
+    }
+
 }

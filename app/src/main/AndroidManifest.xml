@@ -14,12 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IntelligentNotes">
         <activity
-            android:name="com.felipeg.intelligentnotes.authentication.ui.LoginActivity"
+            android:name=".annotation.ui.MyAnnotationsActivity" />
+        <activity
+            android:name=".authentication.ui.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
