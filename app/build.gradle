@@ -18,9 +18,14 @@ android {
     }
 
     buildTypes {
+        def serverUrl = '\"' + (System.getenv("SERVER_URL")?: "http://10.0.2.2:8080")+'\"'
+        debug {
+            buildConfigField "String", "SERVER_URL", serverUrl
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "SERVER_URL", serverUrl
         }
     }
     compileOptions {

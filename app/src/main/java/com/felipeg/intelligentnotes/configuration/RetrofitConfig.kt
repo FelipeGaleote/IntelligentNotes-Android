@@ -1,6 +1,7 @@
 
 package com.felipeg.intelligentnotes.configuration
 
+import com.felipeg.intelligentnotes.BuildConfig
 import com.felipeg.intelligentnotes.annotation.data.AnnotationService
 import com.felipeg.intelligentnotes.authentication.data.LoginService
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -16,8 +17,6 @@ class RetrofitConfig {
     fun annotationService(token: String) = makeRetrofitWithToken(token).create(AnnotationService::class.java)
 
     private fun makeRetrofitWithToken(token: String): Retrofit {
-
-
         val addHeaderInterceptor = Interceptor {
             val request = it.request().newBuilder().addHeader("Authorization", "Bearer $token").build()
             it.proceed(request)
@@ -27,7 +26,7 @@ class RetrofitConfig {
 
         return Retrofit.Builder()
             .client(client)
-            .baseUrl("http://192.168.0.181:8080")
+            .baseUrl(BuildConfig.SERVER_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
@@ -35,7 +34,7 @@ class RetrofitConfig {
 
     private fun makeBasicRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.0.181:8080")
+            .baseUrl(BuildConfig.SERVER_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .build()
